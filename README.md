@@ -1,14 +1,40 @@
-# vue-google-maps-example
+# front
 
-Exemplo de integração entre Vue.js 2 + VueGoogleMaps em projetos que usam [vue-cli / webpack](https://github.com/vuejs-templates/webpack):
+> A Vue.js project
 
-Note que você deve usar a versão **Fork** do projeto **vue2-google-maps** pois a versão original não é compatível com Vue.js 2 (e segundo o próprio desenvolvedor não há previsão de quando isso irá ocorrer). O repositório do Fork está disponível neste link: https://github.com/xkjyeah/vue-google-maps
+## Build Setup
 
-# Para Testar
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# build for production and cordova build.
+npm run cordova-build
+
+# build for production and serve the app through the browser - no hot reload.
+npm run browser
+
+# add respective platforms
+cordova platform add android
+cordova platform add ios
+
+# build for production and serve the app on an iOS device
+npm run ios
+
+# build for production and serve the app on an android device (won't serve on a virtual device)
+npm run android
+
+# build for production and serve the app on an android device (will serve on a virtual device or physical device - prefers virtual)
+npm run android-vm
 ```
-$ git clone https://github.com/uebbi/vue-google-maps-example.git
-$ cd vue-google-maps-example
-$ npm install
-$ npm run dev
-```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

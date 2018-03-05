@@ -1,15 +1,28 @@
 import Vue from 'vue'
-import * as VueGoogleMaps from 'vue2-google-maps'
-import App from './App'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.css'
+import VueCordova from 'vue-cordova'
+import VueHead from 'vue-head'
 
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyAEnFVZCRV51i9sDpwqoH_w2LPXW02WuyY'
-  }
-})
+import App from './App'
+import router from './router'
+
+Vue.use(Vuetify)
+Vue.config.productionTip = false
+Vue.use(VueCordova)
+Vue.use(VueHead)
+
+// add cordova.js only if serving the app through file://
+if (window.location.protocol === 'file:' || window.location.port === '3000') {
+  var cordovaScript = document.createElement('script')
+  cordovaScript.setAttribute('type', 'text/javascript')
+  cordovaScript.setAttribute('src', 'cordova.js')
+  document.body.appendChild(cordovaScript)
+}
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
